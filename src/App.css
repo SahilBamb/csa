@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Pixeled";
-  src: url("/public/fonts/Pixeled.ttf") format("truetype");
+  src: url("/fonts/Pixeled.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -10,4 +10,62 @@
 
 @theme {
   --font-pixeled: "Pixeled", serif;
+}
+
+:root {
+  background: #f8d5a4;
+  color: #1f1f1f;
+  font-synthesis: none;
+  text-rendering: geometricPrecision;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+button {
+  font: inherit;
+}
+
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pixel-bg {
+  background-image:
+    linear-gradient(90deg, rgba(127, 111, 77, 0.16) 2px, transparent 2px),
+    linear-gradient(rgba(127, 111, 77, 0.14) 2px, transparent 2px),
+    radial-gradient(circle at 16px 16px, rgba(127, 111, 77, 0.18) 0 4px, transparent 5px);
+  background-size: 34px 34px, 34px 34px, 68px 68px;
+}
+
+.pixel-title {
+  text-shadow:
+    5px 0 #1f1f1f,
+    -5px 0 #1f1f1f,
+    0 5px #1f1f1f,
+    0 -5px #1f1f1f,
+    6px 6px #1f1f1f,
+    10px 10px rgba(101, 77, 47, 0.25);
+}
+
+.pixel-soft-shadow {
+  text-shadow: 4px 4px 0 rgba(101, 119, 84, 0.75);
+}
+
+.status-ticks {
+  background-image: linear-gradient(90deg, rgba(31, 31, 31, 0.22) 1px, transparent 1px);
+  background-size: 8px 100%;
+}
+
+::selection {
+  background: #1f1f1f;
+  color: #f8d5a4;
 }
